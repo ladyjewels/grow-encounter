@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Registered | The G.R.O.W. Encounter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum-black:#241028;--plum:#3B1550;--plum-mid:#5B2C5F;
+    --wine:#6E1F35;--gold:#C9A227;--gold-soft:#DCC067;
+    --cream:#F6F0E4;--cream-dim:#E9DFC9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:linear-gradient(180deg, var(--plum-mid) 0%, var(--plum) 55%, var(--plum-black) 100%);
+    color:var(--cream);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+  }
+  .card{
+    max-width:520px;
+    width:100%;
+    text-align:center;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.24em;
+    font-size:0.7rem;
+    color:var(--gold);
+    display:block;
+    margin-bottom:16px;
+  }
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:clamp(1.8rem,5vw,2.4rem);
+  }
+  .sub{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color:var(--gold-soft);
+    margin-top:10px;
+    font-size:1.05rem;
+  }
+  p.lead{
+    margin-top:22px;
+    font-size:0.95rem;
+    color:var(--cream-dim);
+    line-height:1.7;
+  }
+  .steps{
+    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .step{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:3px;
+    padding:18px 20px;
+    text-align:left;
+    text-decoration:none;
+    color:var(--cream);
+    transition:background 0.2s ease;
+  }
+  .step:hover{background:rgba(255,255,255,0.1);}
+  .step .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.6rem;
+    color:var(--gold);
+    min-width:30px;
+  }
+  .step .text{flex:1;}
+  .step .text .title{font-size:0.95rem;font-weight:500;}
+  .step .text .desc{font-size:0.8rem;color:var(--cream-dim);margin-top:2px;}
+  .step .arrow{color:var(--gold);font-size:1.1rem;}
+  footer{
+    margin-top:40px;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--cream-dim);
+    opacity:0.7;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="eyebrow">Dr. Shelby Frederick Global Ministries</span>
+  <h1>You're registered.</h1>
+  <div class="sub">The G.R.O.W. Encounter, August 28&ndash;30, 2026</div>
+  <p class="lead">Your seat is held. Three quick steps stand between now and Friday, all of them take a few minutes each.</p>
+  <p class="lead" style="margin-top:10px;">If you paid the $100 deposit, you'll receive an invoice for the remaining balance, split into two payments.</p>
+
+  <div class="steps">
+    <a class="step" href="preregistration.html">
+      <div class="num">1</div>
+      <div class="text">
+        <div class="title">Complete your preregistration</div>
+        <div class="desc">Rooming, meals, and a few details we need before you arrive.</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+    </a>
+    <a class="step" href="GROW-Waiver-Photo-Release.docx">
+      <div class="num">2</div>
+      <div class="text">
+        <div class="title">Sign your waiver and photo release</div>
+        <div class="desc">Download, sign, and bring it with you, or email it back ahead of time.</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+    </a>
+    <a class="step" href="GROW-Registrant-Itinerary.docx">
+      <div class="num">3</div>
+      <div class="text">
+        <div class="title">Review your weekend itinerary</div>
+        <div class="desc">Friday through Sunday, session by session, so you know what to expect.</div>
+      </div>
+      <div class="arrow">&rarr;</div>
+    </a>
+  </div>
+
+  <footer>We'll see you August 28</footer>
+</div>
+
+</body>
+</html>
