@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Application | The G.R.O.W. Encounter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum-black:#241028;--plum:#3B1550;--wine:#6E1F35;
+    --gold:#C9A227;--gold-soft:#DCC067;--cream:#F6F0E4;--cream-dim:#E9DFC9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--cream);color:var(--plum-black);font-family:'Jost',sans-serif;font-weight:300;line-height:1.6;}
+  h1,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px 90px;}
+  header{
+    background:linear-gradient(180deg, var(--plum) 0%, var(--plum-black) 100%);
+    color:var(--cream);text-align:center;padding:56px 24px 40px;
+  }
+  header .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--gold);display:block;margin-bottom:14px;}
+  header h1{font-size:clamp(1.8rem,5vw,2.4rem);}
+  header p{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-soft);margin-top:10px;font-size:1.05rem;}
+  .deadline-note{
+    background:var(--wine);color:var(--cream);text-align:center;
+    padding:14px 20px;font-size:0.85rem;letter-spacing:0.02em;
+  }
+  .deadline-note b{color:var(--gold-soft);}
+  .intro{padding:36px 0 8px;font-size:0.95rem;color:var(--plum);}
+  form{margin-top:20px;}
+  fieldset{border:none;background:var(--cream-dim);border-radius:3px;padding:26px 24px;margin-bottom:20px;}
+  legend{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--plum);padding:0 6px;}
+  label{display:block;font-size:0.82rem;letter-spacing:0.03em;color:var(--wine);margin:16px 0 6px;font-weight:500;}
+  label:first-of-type{margin-top:6px;}
+  input[type="text"],input[type="email"],input[type="tel"],textarea{
+    width:100%;padding:11px 13px;border:1px solid #cfc4a6;border-radius:2px;background:#fff;
+    font-family:'Jost',sans-serif;font-size:0.92rem;color:var(--plum-black);
+  }
+  textarea{resize:vertical;min-height:100px;}
+  .hint{font-size:0.78rem;color:#7a7264;margin-top:4px;}
+  .btn-primary{
+    display:block;width:100%;background:var(--gold);color:var(--plum-black);border:none;padding:16px;
+    font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;border-radius:2px;cursor:pointer;margin-top:8px;
+  }
+  .btn-primary:hover{background:var(--gold-soft);}
+  .btn-primary:disabled{opacity:0.6;cursor:not-allowed;}
+  .status{text-align:center;font-size:0.85rem;margin-top:14px;min-height:20px;color:var(--wine);}
+  .confirm{display:none;text-align:center;padding:60px 24px;color:var(--plum);}
+  .confirm.show{display:block;}
+  .confirm .eyebrow{color:var(--wine);text-transform:uppercase;letter-spacing:0.2em;font-size:0.75rem;display:block;margin-bottom:14px;}
+  .confirm h2{font-size:1.8rem;}
+  .confirm p{margin-top:14px;font-size:0.95rem;}
+  #formSection.hide{display:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="eyebrow">Dr. Shelby Frederick Global Ministries</span>
+  <h1>Partial Scholarship Application</h1>
+  <p>The G.R.O.W. Encounter, August 28&ndash;30, 2026</p>
+</header>
+
+<div class="deadline-note">Application deadline: <b>Saturday, August 15</b> &nbsp;&middot;&nbsp; If selected, balance due in full by <b>August 22</b></div>
+
+<div class="wrap">
+
+  <div id="formSection">
+    <p class="intro">Five partial scholarships are available, $200 off registration, bringing your balance to $297. This weekend belongs to every woman who needs it, not just the ones who can pay in full up front. Klarna and Afterpay payment plans are available at checkout for eligible applicants. Takes about five minutes to apply.</p>
+
+    <form id="scholarshipForm">
+
+      <fieldset>
+        <legend>Your information</legend>
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your why</legend>
+        <label for="why">Why does this weekend matter to you right now?</label>
+        <textarea id="why" required placeholder="Share what's bringing you to this moment."></textarea>
+        <label for="need">What would this scholarship make possible for you that wouldn't be possible otherwise?</label>
+        <textarea id="need" required placeholder="A few honest sentences is plenty."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Commitment</legend>
+        <label>If selected, I understand the remaining balance of $297 is due in full by August 22, 2026, with Klarna and Afterpay payment plans available at checkout if eligible.</label>
+        <div style="margin-top:8px;">
+          <label style="display:flex;align-items:center;gap:8px;font-weight:400;color:var(--plum-black);">
+            <input type="checkbox" id="commit" required style="width:auto;"> Yes, I understand and can commit to this.
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn-primary" id="submitBtn">Submit application</button>
+      <div class="status" id="statusMsg"></div>
+    </form>
+  </div>
+
+  <div class="confirm" id="confirmSection">
+    <span class="eyebrow">Received</span>
+    <h2>Your application is in.</h2>
+    <p>Thank you for sharing your why with us. Scholarship decisions will be sent by email shortly after the August 15 deadline.</p>
+  </div>
+
+</div>
+
+<script>
+  const form = document.getElementById('scholarshipForm');
+  const statusMsg = document.getElementById('statusMsg');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    statusMsg.textContent = 'Submitting...';
+
+    const record = {
+      _subject: 'GROW Scholarship Application: ' + document.getElementById('fullName').value,
+      formType: 'Scholarship Application',
+      fullName: document.getElementById('fullName').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      why: document.getElementById('why').value,
+      need: document.getElementById('need').value,
+      commit: document.getElementById('commit').checked ? 'Yes' : 'No',
+      submittedAt: new Date().toISOString()
+    };
+
+    try {
+      const response = await fetch('https://formspree.io/f/mlgqevka', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(record)
+      });
+      if (!response.ok) throw new Error('Formspree did not confirm the save');
+      document.getElementById('formSection').classList.add('hide');
+      document.getElementById('confirmSection').classList.add('show');
+    } catch (err) {
+      statusMsg.textContent = 'Something did not save. Try again, or reach out directly if this keeps happening.';
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
