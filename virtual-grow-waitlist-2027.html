@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual G.R.O.W. Encounter 2027 | Join the Waitlist</title>
+<style>
+  :root {
+    --plum: #3B1550;
+    --wine: #8B3A5E;
+    --gold: #C9A15A;
+    --cream: #FAF6EE;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--cream);
+    color: var(--plum);
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .eyebrow {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    color: var(--wine);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    color: var(--plum);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .subhead {
+    text-align: center;
+    color: var(--wine);
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .belief {
+    background: var(--plum);
+    color: var(--cream);
+    padding: 1.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .belief strong { color: var(--gold); }
+
+  p.body-copy {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    hyphens: auto;
+    text-wrap: pretty;
+  }
+
+  .details {
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 1.75rem 0;
+    margin: 2.5rem 0;
+  }
+
+  .details dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 0.9rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+  }
+
+  .details dt {
+    font-weight: bold;
+    color: var(--wine);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    align-self: center;
+  }
+
+  .details dd { color: var(--plum); }
+
+  .tiers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2.5rem 0;
+  }
+
+  .tier-card {
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .tier-card.vip {
+    background: var(--plum);
+    color: var(--cream);
+  }
+
+  .tier-card h3 {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--wine);
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-card.vip h3 { color: var(--gold); }
+
+  .tier-card .amount {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: var(--wine);
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-card.vip .amount { color: var(--gold); }
+
+  .tier-card .includes {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .proof { margin: 2.5rem 0; }
+
+  .proof h2 {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--wine);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .featured-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.75rem;
+    background: var(--plum);
+  }
+
+  .featured-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+
+  .song-player {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--plum);
+    border-radius: 6px;
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .song-player .cover {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    background: var(--wine);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.65rem;
+    color: var(--gold);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .song-player .song-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .song-player .song-title {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: var(--cream);
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .song-player .song-artist {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .song-player audio {
+    width: 100%;
+    height: 32px;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .video-slot {
+    aspect-ratio: 9 / 16;
+    background: var(--plum);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .video-slot iframe, .video-slot video {
+    width: 100%; height: 100%; border: none; display: block;
+  }
+
+  .video-slot .placeholder-label {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    color: var(--gold);
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .testimonial {
+    border-left: 3px solid var(--gold);
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial p {
+    font-size: 1.02rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    text-align: justify;
+    hyphens: auto;
+    text-wrap: pretty;
+  }
+
+  .testimonial cite {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--wine);
+  }
+
+  form {
+    background: white;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 2rem;
+  }
+
+  form h2 {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    color: var(--plum);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--wine);
+    margin-bottom: 0.35rem;
+    margin-top: 1rem;
+  }
+
+  input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background: white;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1.75rem;
+    padding: 0.9rem;
+    background: var(--wine);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  button:hover { background: var(--plum); }
+
+  button:focus-visible, input:focus-visible, select:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  .fine-print {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #7a6a85;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  #success-message { display: none; text-align: center; padding: 3rem 1.5rem; }
+  #success-message h1 { color: var(--wine); }
+
+  @media (max-width: 480px) {
+    .details dl { grid-template-columns: 1fr; row-gap: 0.3rem; }
+    .details dt { margin-top: 0.6rem; }
+    .tiers { grid-template-columns: 1fr; }
+  }
+
+  h1, .subhead, .belief, .fine-print, .includes {
+    text-wrap: pretty;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap" id="main-content">
+  <p class="eyebrow">Virtual G.R.O.W. Encounter</p>
+  <h1>Three Cohorts. One Room That Travels To You.</h1>
+  <p class="subhead">Twenty five seats each cohort. The same six movements that filled the room in Columbus.</p>
+
+  <div class="belief">
+    You don't need to be fully healed to walk through this door.<br>
+    You just need to believe <strong>rebuilding is still available to you.</strong>
+  </div>
+
+  <p class="body-copy">Columbus filled. Women arrived carrying things they were ready to release, and left with a framework for what comes next.</p>
+  <p class="body-copy">In 2027, that same room opens virtual three times. No flight. No hotel. Twenty five women per cohort move through Arrive, Reveal, Release, Restore, Renew, and Rise, together, from their own space.</p>
+  <p class="body-copy">Small breakout groups keep it personal. Five women per circle. No one gets lost in a gallery view of strangers.</p>
+
+  <div class="details">
+    <dl>
+      <dt>Dates</dt>
+      <dd>Choose your cohort below</dd>
+      <dt>Time</dt>
+      <dd>6:30 PM &ndash; 9:30 PM Eastern, each night</dd>
+      <dt>Format</dt>
+      <dd>Live virtual, small breakout circles of five</dd>
+      <dt>Seats</dt>
+      <dd>25 per cohort</dd>
+    </dl>
+  </div>
+
+  <div class="tiers">
+    <div class="tier-card">
+      <h3>Standard</h3>
+      <div class="amount">$297</div>
+      <div class="includes">Journal &amp; tee shipped to you. Full live experience, all three nights.</div>
+    </div>
+    <div class="tier-card vip">
+      <h3>VIP</h3>
+      <div class="amount">$347</div>
+      <div class="includes">Everything in Standard, plus coloring book, colored pencils, and an essential oil set to keep.</div>
+    </div>
+  </div>
+
+  <div class="proof">
+    <h2>Hear From Columbus</h2>
+
+    <div class="featured-video">
+      <iframe src="https://www.youtube.com/embed/_kA488E0dDI" title="GROW Encounter testimonial" allowfullscreen></iframe>
+    </div>
+
+
+    <!--
+      VIDEO SLOTS
+      Drop in vertical clips from the August in-person cohort.
+      Replace each .video-slot placeholder with either:
+        <video controls src="path-to-clip.mp4"></video>
+      or an embed:
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+    -->
+    
+    <div class="song-player">
+      <div class="cover">G.R.O.W.<br>Anthem</div>
+      <div class="song-info">
+        <div class="song-title">Make Room</div>
+        <div class="song-artist">Shelby Frederick</div>
+        <audio controls>
+          <source src="Grow_Encounter.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-slot"><span class="placeholder-label">Video 1<br>Columbus testimonial clip</span></div>
+      <div class="video-slot"><span class="placeholder-label">Video 2<br>Columbus testimonial clip</span></div>
+    </div>
+
+    <!--
+      TESTIMONIAL QUOTES
+      Replace placeholder text and cite with real quotes and first name / last
+      initial from Columbus attendees. Keep quotes short, one to three
+      sentences, in her own words.
+    -->
+    <div class="testimonial">
+      <p>Add testimonial quote from a Columbus attendee here.</p>
+      <cite>&mdash; First name, Columbus cohort</cite>
+    </div>
+
+    <div class="testimonial">
+      <p>Add a second testimonial quote from a Columbus attendee here.</p>
+      <cite>&mdash; First name, Columbus cohort</cite>
+    </div>
+  </div>
+
+  <form id="waitlist-form" action="https://formspree.io/f/mgaewvwa" method="POST">
+    <h2>Join the Waitlist</h2>
+
+    <label for="name">Full name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="cohort">Preferred cohort</label>
+    <select id="cohort" name="cohort" required>
+      <option value="" disabled selected>Select a date</option>
+      <option value="January 4-6, 2027">January 4-6, 2027</option>
+      <option value="May 3-5, 2027">May 3-5, 2027</option>
+      <option value="September 6-8, 2027">September 6-8, 2027</option>
+    </select>
+
+    <label for="tier">Preferred tier</label>
+    <select id="tier" name="tier" required>
+      <option value="" disabled selected>Select a tier</option>
+      <option value="Standard - $297">Standard &mdash; $297</option>
+      <option value="VIP - $347">VIP &mdash; $347</option>
+    </select>
+
+    <input type="hidden" name="track" value="Virtual 2027">
+    <input type="hidden" name="_subject" value="New Virtual 2027 Waitlist Signup">
+
+    <button type="submit">Reserve My Spot on the List</button>
+
+    <p class="fine-print">Waitlist members get first access before registration opens to the public. No payment required to join the list. Deposits are non-refundable once registration opens.</p>
+  </form>
+</div>
+
+<div id="success-message">
+  <p class="eyebrow">You're In</p>
+  <h1>You're On the List.</h1>
+  <p class="subhead">Watch your inbox. Waitlist members register first, before this opens to everyone else.</p>
+</div>
+
+<script>
+  const form = document.getElementById('waitlist-form');
+  const mainContent = document.getElementById('main-content');
+  const successMessage = document.getElementById('success-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function (response) {
+        if (response.ok) {
+          mainContent.style.display = 'none';
+          successMessage.style.display = 'block';
+          window.scrollTo(0, 0);
+        } else {
+          alert('Something went wrong. Try again, or email us directly.');
+        }
+      })
+      .catch(function () {
+        alert('Something went wrong. Try again, or email us directly.');
+      });
+  });
+</script>
+
+</body>
+</html>
